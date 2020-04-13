@@ -13,7 +13,7 @@ locals {
     address = data.terraform_remote_state.cloud-nomad.outputs.addresses.nomad_ui
 }
 provider "nomad" {
-  address = "http://burkey-iqzow1rgv8demlzy1-nomad-389122050.ap-southeast-2.elb.amazonaws.com:4646"
+  address = local.address
   region  = "ap-southeast-2"
 }
 
