@@ -19,13 +19,13 @@ provider "nomad" {
 
 resource "nomad_acl_policy" "appdev" {
   name        = "appdev"
-  description = "Application Developer profile"
+  description = "Application Developer profile with Terraform"
   rules_hcl   = file("${path.module}/policies/app-dev.policy.hcl")
 }
 
 resource "nomad_acl_policy" "prodops" {
   name        = "prodops"
-  description = "Production Operations profile"
+  description = "Production Operations profile with Terraform"
   rules_hcl   = file("${path.module}/policies/prod-ops.policy.hcl")
 }
 
