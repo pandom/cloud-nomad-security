@@ -1,10 +1,12 @@
-data "terraform_remote_state" "cloud-nomad-aclconfiguration" {
-  backend = "remote"
 
-  config = {
+terraform {
+  required_version = ">= 0.11"
+  backend "remote" {
+    hostname = "app.terraform.io"
     organization = "burkey"
-    workspaces = {
+    workspaces {
       name = "cloud-nomad-aclconfiguration"
     }
   }
+
 }
