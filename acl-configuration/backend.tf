@@ -1,4 +1,4 @@
-data "terraform_remote_state" "cloud-nomadaclbootstrap" {
+data "terraform_remote_state" "cloud-nomad-aclconfiguration" {
   backend = "remote"
 
   config = {
